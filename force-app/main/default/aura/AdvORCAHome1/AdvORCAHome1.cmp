@@ -5,7 +5,7 @@
     <lightning:Card iconName="standard:home" class="welcome" title="Welcome">
         <aura:set attribute="actions">
             <lightning:button label="Create New Incident" onclick="{!c.onNewIncident}" variant="brand" />
-            <lightning:button label="Search" onclick="{!c.onSearch}" variant="brand" />
+            <lightning:button label="Search" onclick="{!c.onSearch}" variant="success" />
         </aura:set>
         <div class="slds-p-horizontal_small slds-p-around_medium body">
             Welcome to IST Operational Risk Capture and Assessment (ORCA)
