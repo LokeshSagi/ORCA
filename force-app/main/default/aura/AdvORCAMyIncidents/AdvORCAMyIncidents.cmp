@@ -1,0 +1,19 @@
+<aura:component controller="AdvORCAMyIncidents" implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    
+    <aura:handler name="init" value="{! this }" action="{! c.doInit }"/>
+    
+    
+        <div style="height: 500px" onmouseover="{!c.onMouseMove}" onmouseleave="{!c.onMouseLeave}">
+            <lightning:datatable
+                                 data-id="{#v.data.Id}"
+                                 keyField="Id"
+                                 data="{! v.data }"
+                                 columns="{! v.columns }"
+                                 hideCheckboxColumn="true"
+                                 onrowaction="{! c.handleRowAction}"/>
+        </div>
+    
+</aura:component>

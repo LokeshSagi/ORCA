@@ -1,0 +1,21 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    
+    <lightning:navigation aura:id="navigateSearch" />
+    
+    <lightning:Card iconName="standard:home" class="welcome" title="Welcome">
+        <aura:set attribute="actions">
+            <lightning:button label="Create New Incident" onclick="{!c.onNewIncident}" variant="brand" />
+            <lightning:button label="Search" onclick="{!c.onSearch}" variant="brand" />
+        </aura:set>
+        <div class="slds-p-horizontal_small slds-p-around_medium body">
+            Welcome to IST Operational Risk Capture and Assessment (ORCA)
+        </div>
+        <div class="slds-p-horizontal_small slds-p-around_medium body">     
+            ORCA is used for reporting business incidents across IST in accordance with the <a href="">IST Incident Reporting Policy and Procedure</a>.
+        </div>
+        <div class="slds-p-horizontal_small slds-p-around_medium body">    
+            Please refer to the <a href="">Incident Reporting Guidelines</a>  for guidance on completing on ORCA incident report.
+        </div>       
+    </lightning:Card>
+
+</aura:component>

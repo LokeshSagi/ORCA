@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Team__c</fullName>
+    <externalId>false</externalId>
+    <label>Team</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Area__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>HR</fullName>
+                <default>false</default>
+                <label>HR</label>
+            </value>
+            <value>
+                <fullName>HSSE</fullName>
+                <default>false</default>
+                <label>HSSE</label>
+            </value>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal</label>
+            </value>
+            <value>
+                <fullName>Marine</fullName>
+                <default>false</default>
+                <label>Marine</label>
+            </value>
+            <value>
+                <fullName>On Exchange</fullName>
+                <default>false</default>
+                <label>On Exchange</label>
+            </value>
+            <value>
+                <fullName>PPM</fullName>
+                <default>false</default>
+                <label>PPM</label>
+            </value>
+            <value>
+                <fullName>IT&amp;S</fullName>
+                <default>false</default>
+                <label>IT&amp;S</label>
+            </value>
+            <value>
+                <fullName>Global Valuations</fullName>
+                <default>false</default>
+                <label>Global Valuations</label>
+            </value>
+            <value>
+                <fullName>GFS - IData</fullName>
+                <default>false</default>
+                <label>GFS - IData</label>
+            </value>
+            <value>
+                <fullName>GFS Settlements</fullName>
+                <default>false</default>
+                <label>GFS Settlements</label>
+            </value>
+            <value>
+                <fullName>Commodity Risk</fullName>
+                <default>false</default>
+                <label>Commodity Risk</label>
+            </value>
+            <value>
+                <fullName>GBS CDD</fullName>
+                <default>false</default>
+                <label>GBS CDD</label>
+            </value>
+            <value>
+                <fullName>GBS ARC</fullName>
+                <default>false</default>
+                <label>GBS ARC</label>
+            </value>
+            <value>
+                <fullName>Operations Scheduling</fullName>
+                <default>false</default>
+                <label>Operations Scheduling</label>
+            </value>
+            <value>
+                <fullName>Strategic Organisation</fullName>
+                <default>false</default>
+                <label>Strategic Organisation</label>
+            </value>
+            <value>
+                <fullName>Trading</fullName>
+                <default>false</default>
+                <label>Trading</label>
+            </value>
+            <value>
+                <fullName>Supply</fullName>
+                <default>false</default>
+                <label>Supply</label>
+            </value>
+            <value>
+                <fullName>Trade Analytics</fullName>
+                <default>false</default>
+                <label>Trade Analytics</label>
+            </value>
+            <value>
+                <fullName>FVC</fullName>
+                <default>false</default>
+                <label>FVC</label>
+            </value>
+            <value>
+                <fullName>Tax</fullName>
+                <default>false</default>
+                <label>Tax</label>
+            </value>
+            <value>
+                <fullName>Regulatory Affairs</fullName>
+                <default>false</default>
+                <label>Regulatory Affairs</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Back Office</controllingFieldValue>
+            <valueName>HR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Back Office</controllingFieldValue>
+            <valueName>HSSE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Back Office</controllingFieldValue>
+            <valueName>Legal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Back Office</controllingFieldValue>
+            <valueName>Marine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Back Office</controllingFieldValue>
+            <valueName>On Exchange</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Back Office</controllingFieldValue>
+            <valueName>PPM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Back Office</controllingFieldValue>
+            <valueName>IT&amp;S</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Front Office</controllingFieldValue>
+            <valueName>GFS - IData</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Front Office</controllingFieldValue>
+            <valueName>GFS Settlements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Front Office</controllingFieldValue>
+            <valueName>Commodity Risk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Front Office</controllingFieldValue>
+            <valueName>GBS CDD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Middle Office</controllingFieldValue>
+            <valueName>GBS ARC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Middle Office</controllingFieldValue>
+            <valueName>Operations Scheduling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Middle Office</controllingFieldValue>
+            <valueName>Strategic Organisation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Middle Office</controllingFieldValue>
+            <valueName>Trading</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>External to BP</controllingFieldValue>
+            <valueName>Supply</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>External to BP</controllingFieldValue>
+            <valueName>Trade Analytics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>External to BP</controllingFieldValue>
+            <valueName>FVC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>External to BP</controllingFieldValue>
+            <valueName>Tax</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,20 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction,lightning:isUrlAddressable" access="global" >
+	
+    <aura:attribute name="incomingData" type="Object" />
+    
+    <aura:handler name="advSearchFormEvent" event="c:AdvORCASearchCompEvent" action="{!c.onSearch}" />
+    
+    <aura:registerEvent name="refreshEvent" type="c:AdvORCASendRecordId" />
+    
+    <aura:handler name="advInlineEvent" event="c:AdvORCARefreshInlineEditSave" action="{!c.onInlineRefresh}" />
+    
+    <lightning:card title="Advanced Search" class="bottom">
+        <c:AdvancedORCASearch />
+    </lightning:card>
+    <lightning:card title="Search Results">
+        <aura:set attribute="actions" >
+            <lightning:button label="Refresh" onclick="{!c.onRefresh}" />
+        </aura:set>
+        <c:AdvancedORCASearchResults aura:id="incSearch"/>
+    </lightning:card>
+</aura:component>

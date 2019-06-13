@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Book__c</fullName>
+    <externalId>false</externalId>
+    <label>Book</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Tresury Reading</fullName>
+                <default>false</default>
+                <label>Tresury Reading</label>
+            </value>
+            <value>
+                <fullName>Cactus</fullName>
+                <default>false</default>
+                <label>Cactus</label>
+            </value>
+            <value>
+                <fullName>FVC</fullName>
+                <default>false</default>
+                <label>FVC</label>
+            </value>
+            <value>
+                <fullName>3rd Party</fullName>
+                <default>false</default>
+                <label>3rd Party</label>
+            </value>
+            <value>
+                <fullName>GEP</fullName>
+                <default>false</default>
+                <label>GEP</label>
+            </value>
+            <value>
+                <fullName>GREC</fullName>
+                <default>false</default>
+                <label>GREC</label>
+            </value>
+            <value>
+                <fullName>GLIGHT</fullName>
+                <default>false</default>
+                <label>GLIGHT</label>
+            </value>
+            <value>
+                <fullName>GDIST</fullName>
+                <default>false</default>
+                <label>GDIST</label>
+            </value>
+            <value>
+                <fullName>Global Options</fullName>
+                <default>false</default>
+                <label>Global Options</label>
+            </value>
+            <value>
+                <fullName>Asset</fullName>
+                <default>false</default>
+                <label>Asset</label>
+            </value>
+            <value>
+                <fullName>GLPG</fullName>
+                <default>false</default>
+                <label>GLPG</label>
+            </value>
+            <value>
+                <fullName>JAC</fullName>
+                <default>false</default>
+                <label>JAC</label>
+            </value>
+            <value>
+                <fullName>Structured Products</fullName>
+                <default>false</default>
+                <label>Structured Products</label>
+            </value>
+            <value>
+                <fullName>GLNG</fullName>
+                <default>false</default>
+                <label>GLNG</label>
+            </value>
+            <value>
+                <fullName>London G&amp;P</fullName>
+                <default>false</default>
+                <label>London G&amp;P</label>
+            </value>
+            <value>
+                <fullName>Financial Org Products</fullName>
+                <default>false</default>
+                <label>Financial Org Products</label>
+            </value>
+            <value>
+                <fullName>Gas</fullName>
+                <default>false</default>
+                <label>Gas</label>
+            </value>
+            <value>
+                <fullName>Power</fullName>
+                <default>false</default>
+                <label>Power</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

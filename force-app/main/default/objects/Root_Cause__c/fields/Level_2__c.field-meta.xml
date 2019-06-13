@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Level_2__c</fullName>
+    <externalId>false</externalId>
+    <label>Level 2</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Level_1__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Deliberate Failure</fullName>
+                <default>false</default>
+                <label>Deliberate Failure</label>
+            </value>
+            <value>
+                <fullName>Lack of due Diligence</fullName>
+                <default>false</default>
+                <label>Lack of due Diligence</label>
+            </value>
+            <value>
+                <fullName>Training/Competence</fullName>
+                <default>false</default>
+                <label>Training/Competence</label>
+            </value>
+            <value>
+                <fullName>Insufficient team resourcing</fullName>
+                <default>false</default>
+                <label>Insufficient team resourcing</label>
+            </value>
+            <value>
+                <fullName>SLA</fullName>
+                <default>false</default>
+                <label>SLA</label>
+            </value>
+            <value>
+                <fullName>Inaccurate MI</fullName>
+                <default>false</default>
+                <label>Inaccurate MI</label>
+            </value>
+            <value>
+                <fullName>Control Failure</fullName>
+                <default>false</default>
+                <label>Control Failure</label>
+            </value>
+            <value>
+                <fullName>Policy did not fit for purpose</fullName>
+                <default>false</default>
+                <label>Policy did not fit for purpose</label>
+            </value>
+            <value>
+                <fullName>System Failure</fullName>
+                <default>false</default>
+                <label>System Failure</label>
+            </value>
+            <value>
+                <fullName>System Technology Failure</fullName>
+                <default>false</default>
+                <label>System Technology Failure</label>
+            </value>
+            <value>
+                <fullName>Lack of System</fullName>
+                <default>false</default>
+                <label>Lack of System</label>
+            </value>
+            <value>
+                <fullName>Third Party</fullName>
+                <default>false</default>
+                <label>Third Party</label>
+            </value>
+            <value>
+                <fullName>Supplier Failure</fullName>
+                <default>false</default>
+                <label>Supplier Failure</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>People</controllingFieldValue>
+            <valueName>Deliberate Failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>People</controllingFieldValue>
+            <valueName>Lack of due Diligence</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>People</controllingFieldValue>
+            <valueName>Training/Competence</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>People</controllingFieldValue>
+            <valueName>Insufficient team resourcing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Process</controllingFieldValue>
+            <valueName>SLA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Process</controllingFieldValue>
+            <valueName>Inaccurate MI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Process</controllingFieldValue>
+            <valueName>Control Failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Policy</controllingFieldValue>
+            <valueName>Policy did not fit for purpose</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System</controllingFieldValue>
+            <valueName>System Failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System</controllingFieldValue>
+            <valueName>System Technology Failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System</controllingFieldValue>
+            <valueName>Lack of System</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>External Event</controllingFieldValue>
+            <valueName>Third Party</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>External Event</controllingFieldValue>
+            <valueName>Supplier Failure</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

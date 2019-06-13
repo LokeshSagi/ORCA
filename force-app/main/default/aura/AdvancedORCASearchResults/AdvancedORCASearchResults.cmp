@@ -1,0 +1,100 @@
+<aura:component controller = "AdvancedORCASearchClass" 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    
+    <aura:attribute name="searchData" type="Object" />
+    <aura:attribute name="data" type="List" default="[]" />
+    <aura:attribute name="columns" type="List" />
+    <aura:attribute name="mySelectedRows" type="Object[]" />
+    <aura:attribute name="selectedRowsCount" type="Integer" default="0" />
+    <aura:attribute name="maxRowSelection" type="Integer" default="5"/>
+    <aura:attribute name="isButtonEnabled" type="boolean" default="false" />
+    
+    <aura:attribute name="selectedIds" type="List" />
+    
+    <aura:attribute name="allData" type="List"/>
+    <aura:attribute name="rowsToDisplay" type="Integer" default="7" />
+    <aura:attribute name="totalPages" type="Integer" />
+    <aura:attribute name="currentPageNumber" type="Integer" default="1"/>
+    
+    <aura:attribute name="enableInfiniteLoading" type="boolean" default="true" />
+    <aura:attribute name="totalRows" type="Integer" />
+    <aura:attribute name="offsetNumber" type="Integer" default="0" />
+    <aura:attribute name="initialRows" type="Integer" default="7" />
+    <aura:attribute name="isLoading" type="boolean" default="false" />
+    <aura:attribute name="loadMoreStatus" type="String" default="" />
+    
+    
+    <aura:attribute name="selection" type="List" access="PRIVATE"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <!-- <aura:handler event="c:AdvORCASendRecordId" action="{!c.refreshComponent}" />  -->
+    <!--    <aura:handler event="force:refreshView" action="{!c.doInit}" /> -->
+    
+    <aura:registerEvent name="advInlineEvent" type="c:AdvORCARefreshInlineEditSave" />
+ 
+    <aura:method name="search" action="{!c.getSearchResult}">
+        <aura:attribute name="fromDate" type="Date"/>
+        <aura:attribute name="toDate" type="Date" />
+        <aura:attribute name="selectedStatuses" type="String[]" />
+        
+    </aura:method>
+    
+    <lightning:navigation aura:id="navService" />
+    
+    <aura:if isTrue="{!v.isButtonEnabled}">
+        <lightning:layout horizontalAlign="center">
+            <lightning:layoutItem  padding="around-large">
+                
+                <lightning:button iconName="action:download" iconPosition="right" label="Download Selected" onclick="{!c.onDownload}" 
+                                  variant="brand" />
+                
+            </lightning:layoutItem>
+        </lightning:layout>
+    </aura:if>
+    
+    <lightning:layout horizontalAlign="center" multipleRows="true">
+        
+        <lightning:layoutItem size="12">
+            <div style="height: 300px">
+                <lightning:dataTable  
+                                     aura:id="dataTable"
+                                     columns="{!v.columns}"
+                                     data="{!v.data}"
+                                     keyField="Id"
+                                     enableInfiniteLoading="{!v.enableInfiniteLoading}"
+                                     onloadmore="{!c.loadMoreData}"
+                                     isLoading="{!v.isLoading}"
+                                     hideCheckboxColumns="false"
+                                     onrowaction="{!c.handleRowAction}"
+                                     maxRowSelection="{! v.maxRowSelection }"
+                                     onrowselection="{! c.updateSelectedText }" 
+                                     onsave="{! c.onSave}"
+                                     />
+            </div>
+        </lightning:layoutItem>
+        
+        <aura:if isTrue="{!v.isButtonEnabled}">
+            <lightning:layoutItem size="12" class="centerAlign">
+                {!v.loadMoreStatus}
+            </lightning:layoutItem>
+            
+        </aura:if>
+        <!--
+        <aura:if isTrue="{!v.isButtonEnabled}">
+            <lightning:layoutItem padding="around-small" flexibility="auto">
+                <lightning:button label="First" iconName="utility:left" iconPosition="left" variant="brand" onclick="{!c.onFirst}" 
+                                  disabled="{! v.currentPageNumber == 1}" />
+                <lightning:button iconName="utility:chevronleft" iconPosition="right" onclick="{!c.onPrev}" class="slds-p-right_large" 
+                                  disabled="{! v.currentPageNumber == 1}" />
+                
+                <lightning:button iconName="utility:chevronright" iconPosition="right"
+                                  onclick="{!c.onNext}" class="slds-p-left_large"  disabled="{! v.currentPageNumber == v.totalPages}" />
+                <lightning:button label="Last" iconName="utility:right" iconPosition="right" variant="brand" onclick="{!c.onLast}" 
+                                  disabled="{! v.currentPageNumber == v.totalPages}" />
+                
+            </lightning:layoutItem> 
+        </aura:if> -->
+    </lightning:layout>
+    
+</aura:component>

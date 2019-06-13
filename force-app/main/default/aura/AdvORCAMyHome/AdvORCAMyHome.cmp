@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    
+    <lightning:card title="My Incidents">
+        <c:AdvORCAMyIncidents />
+    </lightning:card>
+    <lightning:card title="My Actions">
+        <c:AdvORCAMyActions />
+    </lightning:card>
+	
+</aura:component>

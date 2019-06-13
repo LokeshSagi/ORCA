@@ -1,0 +1,81 @@
+<aura:component  controller="AdvancedORCASearchClass"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="fromDate" type="Date" />
+    <aura:attribute name="toDate" type="Date" />
+    <aura:attribute name="incidentsReturned" type="Incident__c[]" />
+    <aura:attribute name="statusOptions" type="String[]" />
+    <aura:attribute name="selectedStatuses" type="String[]" />
+    <aura:attribute name="showStatuses" type="boolean" />
+    
+    <aura:attribute name="listControllingValues" type="list" default="[]" description="to store controller field values"/>
+    <aura:attribute name="listDependingValues" type="list" default="['--- None ---']" description="to store dependent field values"/>
+    <aura:attribute name="depnedentFieldMap" type="map" description="map to store dependent values with controlling value"/>
+    <aura:attribute name="bDisabledDependentFld" type="boolean" default="true"/> 
+    <aura:attribute name="objDetail" type="Incident__c" default="{'sobjectType' : 'Incident__c'}"/>
+    <aura:attribute name="controllingFieldAPI" type="string" default="Area__c" description="store field API name of Controller field"/>
+    <aura:attribute name="dependingFieldAPI" type="string" default="Team__c" description="store field API name of dependent field"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <aura:registerEvent name="advSearchFormEvent" type="c:AdvORCASearchCompEvent" />
+    
+    <lightning:card title="Please give the search inputs here" >
+        <lightning:layout horizontalAlign="center"  multipleRows="true">
+            <lightning:layoutItem size="2" padding="around-small" >
+                <lightning:input type="Date" label="From Date" value="{!v.fromDate}"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="2" padding="around-small" >
+                <lightning:input type="Date" label="To Date" value="{!v.toDate}"/>
+            </lightning:layoutItem>
+            
+            <!--Multi-Select Picklist -->
+            <lightning:layoutItem size="2" padding="around-large" flexibility="auto">
+                <lightning:layout horizontalAlign="center" verticalAlign="end" multipleRows="true">
+                <lightning:button label="Status Values" variant="neutral" onclick="{!c.enableStatus}" />
+                
+                    <aura:if isTrue="{!v.showStatuses}">
+                        <ui:inputSelect aura:id="statuses" label="Status" change="{!c.onChange}" multiple="true">
+                            <option>--Select Status--</option>
+                            
+                            <aura:iteration items="{!v.statusOptions}" var="item">
+                                <ui:inputSelectOption text="{!item}" label="{!item}"/>
+                            </aura:iteration>                        
+                        </ui:inputSelect>   
+                    </aura:if>
+                </lightning:layout>
+            </lightning:layoutItem>
+            
+            <!--Controlling Field-->
+            <lightning:layoutItem size="2" padding="around-small">    
+                <lightning:select name="controllerFld"
+                                  value="{!v.objDetail.Area__c}"
+                                  label="Country"
+                                  onchange="{!c.onControllerFieldChange}">
+                    <aura:iteration items="{!v.listControllingValues}" var="val">
+                        <option value="{!val}">{!val}</option>
+                    </aura:iteration>
+                </lightning:select>
+            </lightning:layoutItem>
+            
+            <!--Dependent Field-->
+            <lightning:layoutItem size="2" padding="around-small">
+                <lightning:select name="dependentFld"
+                                  value="{!v.objDetail.Team__c}"
+                                  label="City"
+                                  disabled="{!v.bDisabledDependentFld}">
+                    <aura:iteration items="{!v.listDependingValues}" var="val">
+                        <option value="{!val}">{!val}</option>
+                    </aura:iteration>
+                </lightning:select>
+            </lightning:layoutItem>
+            
+            
+            
+        </lightning:layout>
+        <lightning:layout horizontalAlign="center" verticalAlign="center">
+            <lightning:layoutItem >
+                <lightning:button variant="brand" name="searchButton" onclick="{!c.clickSearch}" label="Search"/>
+            </lightning:layoutItem> 
+        </lightning:layout>
+    </lightning:card>
+</aura:component>

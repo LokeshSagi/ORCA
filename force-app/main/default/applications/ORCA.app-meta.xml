@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>ORCA</label>
+    <navType>Standard</navType>
+    <tabs>Home</tabs>
+    <tabs>Advanced_Search</tabs>
+    <tabs>Incident__c</tabs>
+    <tabs>Action__c</tabs>
+    <tabs>Root_Cause__c</tabs>
+    <tabs>ORCA_Users__c</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>Tower__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>ORCA_UtilityBar</utilityBar>
+</CustomApplication>
